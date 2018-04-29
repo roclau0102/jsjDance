@@ -1,0 +1,791 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41cb500cf0f58e74f9a52a8af931edde, type: 3}
+  m_Name: -tk2d
+  m_EditorClassIdentifier: 
+  version: 4
+  spriteAnimationIndex:
+  - assetGUID: ab40ba84f0d617d4484a030a0b4b6134
+    dataGUID: 
+    managed: 0
+    loadable: 0
+  fontIndex:
+  - assetGUID: b3187e9ffd7eecb46a795b1437f5d09b
+    dataGUID: 20c54b2dd814d4940b5ae3fa94f30aa8
+    managed: 0
+    loadable: 0
+  - assetGUID: b22eeb5fd125dc24ea3812e63f96b188
+    dataGUID: c88642124bdfcb5478b6e6901db8e826
+    managed: 0
+    loadable: 0
+  spriteCollectionIndex:
+  - name: WXLoginAltas
+    spriteCollectionGUID: 393faf9b510d8af429296157af9ecf20
+    spriteCollectionDataGUID: 238e446ff96401243b44646a2501c2ee
+    spriteNames:
+    - mainbg
+    - reset
+    - inputbg
+    - loading
+    - reset_hover
+    - ok_hover
+    - circle
+    - tag2
+    - inputbg_focus
+    - tag1
+    - cursor
+    - ok
+    - centerbg
+    - keyboardbg
+    - key
+    - key_over
+    - longBtn
+    - longBtn2
+    spriteTextureGUIDs:
+    - f4215d62dd446dc4f8a4a884e0ddb507
+    - 8cc6a7d268af2ff4fa66053cd650b670
+    - e401849303173b0478cdceafb51fac00
+    - cc7e3704b11557f4dae09dec70e27a8f
+    - 11a84944201c9164e85d38a81e286ffc
+    - aeea05b86cc34c441a1a63a44ee1aba0
+    - 963a35e97d7e36c4e9f55a757cffb20c
+    - d5316f0a9c3993c40877f95623908653
+    - 2f657a2a1cbdffa4787a75f639d4be3f
+    - 4848e0aaff9d0f248bb56726cde1ca36
+    - b5d1c34b1b897b644a3ec6c70ccb3055
+    - df81a12d287f75d428e34d96f7a446bc
+    - a460bf2ed54b4df498acad2df973aebc
+    - 07258cf7c473131458f6374990228b84
+    - 40c431b1904217541bff16c0108d98b5
+    - 40cecfc4afb79774a9a71b3e0a2864a4
+    - 823feb611be9fd44d89936bbcbd1ae2b
+    - 1fc511b9fe2c04e4ab7174a69b7c3565
+    spriteTextureTimeStamps:
+    - 1446912513.51885
+    - 1446910861.95738
+    - 1446911076.08563
+    - 1447501155.73355
+    - 1447493115.83169
+    - 1448274003.8009
+    - 1446910825.35629
+    - 1446909669.22616
+    - 1453376359.76753
+    - 1446910783.29888
+    - 1447493898.86048
+    - 1446910878.09531
+    - 1446909812.33535
+    - 1447673838.36458
+    - 1447673907.85155
+    - 1453377452.81675
+    - 1448363628.74168
+    - 1453396245.35868
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Arrows
+    spriteCollectionGUID: dc768d85dabdeeb4683668a7405d76fe
+    spriteCollectionDataGUID: 735c3c22863032e4c9ddc294b6a989bc
+    spriteNames:
+    - 1-4
+    - 4-4
+    - 3-8
+    - 3-3
+    - 1-7
+    - 1-6
+    - 2-8
+    - 3-2
+    - 1-2
+    - 1-3
+    - 1-8
+    - 2-6
+    - 2-5
+    - 3-5
+    - 1-5
+    - 2-1
+    - 4-1
+    - 4-7
+    - 4-5
+    - 2-7
+    - 3-7
+    - 2-4
+    - 4-3
+    - 3-6
+    - 4-2
+    - 3-4
+    - 3-1
+    - 2-3
+    - 1-1
+    - 4-8
+    - 4-6
+    - 2-2
+    spriteTextureGUIDs:
+    - 07d06d79d9f89f44ab131a7e3b2c0a5a
+    - 0a4f10b9c7d8c254a9867df10730a594
+    - 0cc259f753937f7468cab06987440bba
+    - 173938649482cd1418c76fd47fc6234d
+    - 215ef003e9566f041af784d69808b23e
+    - 21d6225c6bf041144a9c40da64055d97
+    - 2d697494cd68eb04295e9d0602a74c7d
+    - 3a9ba3a398033a540901037800d56d68
+    - 4b2029d6d05eb7f48b42969c43a8bef7
+    - 51769949f50f1a34e8b6b25b0ed44b97
+    - 564952083a95fb74ba7e92f3b73a4efd
+    - 585a24eb9f155504387009bac7c4dbdd
+    - 6222293b9d9670d429dede78b2d10796
+    - 66037a1218b93c244afebc62f2ca2e44
+    - 660b31fb11e34ed4c8134bdf3d21f7c8
+    - 67cf2c544efc05f4b87b3d0fcc071795
+    - 68bcdcf06d317c64a810f7b21c1797df
+    - 706fc1394f0e34d48b80dd2449cd01cc
+    - 726618120ff01ba44865a3a068bd67d3
+    - 74d17beaf8ee3704cbbce2e46d9c3533
+    - 7a44bdf64d2115e4c85f1a585fa61ad0
+    - 7a6f126ad19ea904c9a25a9a1bd13901
+    - 84bf245ce21ff6748bdfbbb657bf8b93
+    - 8794c1a8e64c31c4786ff600e4374716
+    - 8d03cd734c10f494ab031d4c89c685d2
+    - 9bd65c6774ee2c440a65908938c12c9d
+    - 9d8112d83ceb92842bd4316b338dbf9e
+    - aa5ce19e65e78074eb2912d0377fb8fd
+    - bae60e7ab558b9545bde5f43a6a5ad38
+    - dd862c8bf1a55d640ae3b6e97cc085bd
+    - e0647e8cd348cd44594e5ee015911b09
+    - ff377c1da777c564cb9f42cee5bf5fdb
+    spriteTextureTimeStamps:
+    - 1440676525.58371
+    - 1440682895.97108
+    - 1440682790.76206
+    - 1440682709.38441
+    - 1440676576.84965
+    - 1440676561.19975
+    - 1440682622.62044
+    - 1440682689.9863
+    - 1440676493.96991
+    - 1440676508.62074
+    - 1440676595.93074
+    - 1440682589.82157
+    - 1440682574.01066
+    - 1440682742.71531
+    - 1440676542.45168
+    - 1440682442.69815
+    - 1440682828.81324
+    - 1440682941.51068
+    - 1440682911.81599
+    - 1440682607.73359
+    - 1440682775.90221
+    - 1440682555.53961
+    - 1440682882.02828
+    - 1440682760.41733
+    - 1440682860.03902
+    - 1440682725.83135
+    - 1440682666.80197
+    - 1440682532.94131
+    - 1440676312.24451
+    - 1440682956.05652
+    - 1440682927.63989
+    - 1440682514.21424
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Character
+    spriteCollectionGUID: ca7c01fe27cb32843be5e15efb81cc92
+    spriteCollectionDataGUID: 3ffec1621a5d15b408a6d34585438f84
+    spriteNames:
+    - p8_lock
+    - "\u9501"
+    - "\u4E0B\u8F7D\u8FDB\u5EA6\u6761"
+    - p2
+    - "\u4EBA\u7269\u9009\u4E2D"
+    - p6
+    - p8
+    - p1
+    - p4_lock
+    - "\u4E0B\u8F7D\u5E95\u677F"
+    - p4
+    - p1_lock
+    - "\u6807\u9898"
+    - p5
+    - p3
+    - p7
+    - p5_lock
+    - princess
+    - emily
+    - 
+    - alice
+    - ann
+    - "\u672A\u4E0B\u8F7D"
+    - downloading
+    spriteTextureGUIDs:
+    - 2e04925300385dc4f8e183bf5af69273
+    - 0a8e36cf62376524692ccefbe43417b4
+    - 0f07c2360c5126d4c80865a2e6cc1585
+    - 3fdad296af69ee04bb7cf026fd051e64
+    - 24759d73660be9f458fc808e5e2fe2a0
+    - 5c20ecaa7206d674d887e0c9f81f1feb
+    - 82b3cff7bb4ffd6479e9085e1414833f
+    - c7765e49103c1a146a8979197334daa2
+    - 904a533434e3493458758f67161a9b9a
+    - 73c2f22d24d3b504d8afb33bb91b235f
+    - c14edc8c30555914097217b20c0f65c4
+    - 7063e749862b7064aaa3cfb7a6e430c0
+    - 8f052bfc3dd88f747b37c61f4406891e
+    - c9300bd5b0842e24289c4b2122a5d2f5
+    - d2375fa29c0edea40877a821d075e57a
+    - e73714734a64518428b86ee8b5e00841
+    - ded3f3782956c3842ae6ce2a43ea4c07
+    - 065bb1d72e63c384f93f7af21c8b3168
+    - 244d434515cdd6b47b48f23bd45ff4c1
+    - 
+    - 2687fdc5a0c4104439dfcf2642387fce
+    - bf363bbf76061a04d85ce300820c63ba
+    - 2717580f3984408429729e95cff9c2bd
+    - 75b4fb89a4bee54499214313c2d5ab2d
+    spriteTextureTimeStamps:
+    - 1465745234.7516
+    - 1438596295.64392
+    - 1438596885.17064
+    - 1465745026.40969
+    - 1465745329.046
+    - 1465745091.96744
+    - 1465745120.14805
+    - 1465744952.15544
+    - 1465745189.33901
+    - 1438596867.25262
+    - 1465745065.00589
+    - 1465745170.39392
+    - 1440674816.75197
+    - 1465745078.76168
+    - 1465745042.03258
+    - 1465745107.69334
+    - 1465745212.06431
+    - 1438596381.45383
+    - 1438596410.79651
+    - 0
+    - 1438596394.8586
+    - 1438596350.99709
+    - 1438873419.88999
+    - 1441537251.40383
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Game
+    spriteCollectionGUID: ca294780e407b8549b8bff6b6237c192
+    spriteCollectionDataGUID: 155f280cec315bd419b1c04d790d06d7
+    spriteNames:
+    - ready
+    - progress
+    - flower1
+    - markbg
+    - left
+    - bad
+    - prefect
+    - 2PClose
+    - longPressBg
+    - x
+    - arrowBg
+    - longPressright
+    - longPressdown
+    - longPressleft
+    - down
+    - blackbg
+    - longPressup
+    - cool
+    - combo
+    - good
+    - songBg
+    - up
+    - right
+    - miss
+    - selectoperate
+    - lv4
+    - "\u6682\u505C\u9009\u9879\u7EE7\u7EED"
+    - "\u6682\u505C\u9009\u9879\u91CD\u6765"
+    - lv1
+    - lv3
+    - "\u6682\u505C\u9009\u9879\u9009\u66F2"
+    - lv2
+    - errorprop
+    - 4
+    - 8
+    - 6
+    - 9
+    - 7
+    - 3
+    - 5
+    - 1
+    - 0
+    - 2
+    - "P\u5931\u8D25"
+    - "\u6E38\u620F\u7ED3\u675F"
+    - "\u5B8C\u6210\u6E38\u620F"
+    - "\u8840\u91CF\u7279\u6548"
+    - lingBgRight
+    - lingBgLeft
+    - lingBgUp
+    - lingBgDown
+    - "\u9000\u51FA\u9009\u9879\u9009\u66F2"
+    spriteTextureGUIDs:
+    - e33fcfd2813f4384a88428df042821f5
+    - 3d857a2ec5175b14991479fd0af972b5
+    - 65027a335ecd44741882e4ae2107ae42
+    - 6b50253061a03cf459b8a15d46f3bacd
+    - 0bf52818d1f3e664f8613cffb0a748b8
+    - 26610f72329661c4785a82d80e5d98e3
+    - 28cb427ab81cdf54bad4ded55fd2638f
+    - 29ae183c9ffe71f4d87cd1ba9bb71560
+    - b1b479c1befe03646a6df21ebdb1914d
+    - d102d75c92120c2478df0d900ca4563a
+    - 71d54688beeaa0a4fa56d5e3c9941f86
+    - 8fe400a4f69a15d4bb59f7dccbce3cff
+    - 91369fafc45755140b50043bac926eab
+    - 9fe0bc0bd458f4c4d969b5a2b489d00f
+    - ab79fb27e99eb8a45bd8fba53d4727cd
+    - d032a1f16041d3b45ae2c0c047cae788
+    - b962a4c5487af2748b6245a576938929
+    - b9b306a2bf85cce44a2cd46e61634e9c
+    - bfb6b4aa2d4cf854182f3f9683cc5b13
+    - c176cbdee42212448a93b982b49392f6
+    - d050d4e51dc41b249bbe2eadacb2efd0
+    - dc902cc8deb5e664a8775202280c08ce
+    - de4c67724d5a63b40b305544dd717262
+    - fa719a11edefe8b4a8767201a5eb5d50
+    - 5bd357a9f6589a14ba9099f8715ce213
+    - 5d65291cbb7d39943b786acdca2316ce
+    - a53547bc18b78ad4f94d480d7fc82fe4
+    - c9aad94932f5ed443af2874eb50a2d31
+    - 943a8e960eeeb284e896b08c76bfecc1
+    - ad354219304b20d4f9ec1511a6de04f1
+    - f5f6a391d9430524dafecbfdb91550ad
+    - e6353b960bba0e646a122a1cc3bd3eeb
+    - baf35ad319e8e1047a8b94c3ec9f04e8
+    - 2a55d447a34550b4e813176fe0e3674d
+    - 34a1ca82081e80a40907c30ac6123347
+    - 401d22d2829352041b455c91f2f97f3a
+    - 43c3c7491598eb241b64d5f0039a98cf
+    - 5c92991eaf6d3c947ad17b72836899e7
+    - 61af013583a5dd24193bbc26c41cce44
+    - dc85cca6335df6644b6c96bee50a81cb
+    - 37bc64a47677a8544865d2c20201ff3c
+    - b1078a6ca5eeda44badabcace50c88d6
+    - c722850c6831d5849afa0ff439a62d65
+    - 6d6c9af5075fa244da2ee254f53f1fc0
+    - 27f53c2f49339ac4e91678247b44a114
+    - 0163471deea22174ab9ff5c47918ef07
+    - 6133fb5d96a3f3e43869b6b4e5b7dccc
+    - 66140f4535326544b8f9562a9af830a0
+    - bcfa4069de29f204abe5b4656190f8c3
+    - 1bcdad3c29a25314e84b9a2659165572
+    - 6c4901bfa44bc4c42b4d781ee1865651
+    - 7d10f7e61ebb6c64f92e725b6f565a9c
+    spriteTextureTimeStamps:
+    - 1439826159.70622
+    - 1438180820.69955
+    - 1438180770.43567
+    - 1438182157.83803
+    - 1438163961.28656
+    - 1438162725.03485
+    - 1438162666.11248
+    - 1439998389.65783
+    - 1438164109.79106
+    - 1438250451.89929
+    - 1438164042.44721
+    - 1438192531.08234
+    - 1438192509.65112
+    - 1438192551.90553
+    - 1438163979.67962
+    - 1438445940.13084
+    - 1438192472.29198
+    - 1438162686.30964
+    - 1438161931.21745
+    - 1438162707.14383
+    - 1438603025.02149
+    - 1438163969.12901
+    - 1438163992.64736
+    - 1438162746.7331
+    - 1440598408.91001
+    - 1438358538.37819
+    - 1438601625.56378
+    - 1438601635.93237
+    - 1438358534.67318
+    - 1438358527.89461
+    - 1438601550.8055
+    - 1438358531.62065
+    - 1438163710.59223
+    - 1438162410.89389
+    - 1438162446.70093
+    - 1438162432.85814
+    - 1438162454.41138
+    - 1438162439.31751
+    - 1438162404.0745
+    - 1438162424.82468
+    - 1438162389.55267
+    - 1438162461.98581
+    - 1438162397.2031
+    - 1439826164.38848
+    - 1439826162.10135
+    - 1439826157.38308
+    - 1438162944.72142
+    - 1438186980.73688
+    - 1438186843.96806
+    - 1438186943.68676
+    - 1438186889.15464
+    - 1474968291.10485
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: HightLight
+    spriteCollectionGUID: c02d7e8e6d884fb4ebd7673e61fe83ef
+    spriteCollectionDataGUID: 0cfe24f0b5aeb9c4789dc4d965caee5b
+    spriteNames:
+    - "\u66F2\u76EE\u9009\u4E2D"
+    - "\u6A21\u5F0F\u9009\u4E2D"
+    - "\u8840\u91CF\u7279\u6548"
+    spriteTextureGUIDs:
+    - 5db91e78ec936304ca3cb2a9ca4b57f8
+    - 7bcc2e4891567c24c8f98c2dbeaa6abe
+    - 6133fb5d96a3f3e43869b6b4e5b7dccc
+    spriteTextureTimeStamps:
+    - 1438422074.2317
+    - 1439371995.99937
+    - 1438162944.72142
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Open
+    spriteCollectionGUID: 973ab8c8d8cde2b438d2c0e22e6125cb
+    spriteCollectionDataGUID: 7317cc992ba3bfb4085e20951d61ea6d
+    spriteNames:
+    - "\u80CC\u666F"
+    - yes0
+    - no0
+    - no1
+    - yes1
+    spriteTextureGUIDs:
+    - 1260970aad1edc54194051a30cc26fae
+    - 2cc308b1198b4254cac156dd0de2573d
+    - d722f145e46dff14cbc1a572d3bd2ef6
+    - ecedffa5fbb003c4bb58017da3a260bb
+    - ee656677e0826a445b592c2a7701ad9d
+    spriteTextureTimeStamps:
+    - 1439821262.39432
+    - 1439821262.39432
+    - 1439821262.36432
+    - 1439821262.37432
+    - 1439821262.39432
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Prop
+    spriteCollectionGUID: 8dc13a510d082944bae7157b95cbbec9
+    spriteCollectionDataGUID: 7b6afb03bf05c3941af0e310efae5eb3
+    spriteNames:
+    - "\u7EA0\u9519\u9053\u5177"
+    - "\u9053\u5177\u9009\u4E2D"
+    - "\u81EA\u52A8\u9053\u5177"
+    - "\u7EDF\u4E00\u5E95\u677F"
+    - "\u5355\u4E2A\u9053\u5177\u5E95\u677F"
+    - "\u8840\u91CF\u9053\u51772"
+    - "\u6807\u9898"
+    - "\u9053\u5177\u5DF2\u8D2D\u4E70"
+    - "\u8840\u91CF\u9053\u51771"
+    - "\u8840\u91CF\u9053\u51773"
+    - "\u6587\u5B57\u53D9\u8FF03"
+    - "\u6587\u5B57\u53D9\u8FF02"
+    - "\u6587\u5B57\u53D9\u8FF01"
+    - "\u5355\u4E2A\u9053\u5177\u5E95\u677F1"
+    - "\u7EA0\u9519\u9053\u51772"
+    - "\u7EA0\u9519\u9053\u51771"
+    spriteTextureGUIDs:
+    - 08bf9161947dcba45a2876df67fd27f4
+    - 6603b193b60ea844d83c6883fd8e5b9d
+    - 71e7395d559091d4fb94dee32bea63e6
+    - 75f8a569dd524324bbdf0465e59a0f61
+    - 7c680f70569fc8341bac38cf87b645c3
+    - 8d643f574c452c64ab146496fabac252
+    - 8ffed0a90bb3c1742bc1cd5d142e3aef
+    - b52df40cb415f0646b153c5541d044db
+    - d68aca42fac7ccb41acf7c7e16b03a24
+    - dcd9d076e9db6df4680bb0e9a84ad0f2
+    - 859e52c0b8c47934bace3409b8a12deb
+    - d7bdd992142812649bb138c7a0df3053
+    - f2d20303a21cf1549b31eadbe1cc0015
+    - fc737bca8ce6c8f438f6db577df428e5
+    - 467ab39c7749c8240a6893a50516b12b
+    - e7415bce576ce164a8d5957cc603f00f
+    spriteTextureTimeStamps:
+    - 1465812799.30768
+    - 1465810767.79749
+    - 1465813089.27927
+    - 1438966344.1649
+    - 1465810554.7763
+    - 1465812487.54485
+    - 1440674988.85882
+    - 1465745349.21415
+    - 1465813115.9928
+    - 1465812737.46115
+    - 1440674964.34742
+    - 1440674948.74652
+    - 1440674924.84616
+    - 1465810699.38057
+    - 1465812868.31063
+    - 1465812832.27257
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Score
+    spriteCollectionGUID: f4e032f0c19ea734aa3912056b3e460d
+    spriteCollectionDataGUID: 5ba1f45d6948c9949b1c3f499ab48bfe
+    spriteNames:
+    - "\u73A9\u5BB6\u6587\u5B571"
+    - g4
+    - "\u7EDF\u4E00\u5E95\u677F"
+    - "\u5956\u52B1\u5E95\u677F"
+    - "\u6807\u9898"
+    - g0
+    - "\u5956\u52B1\u6587\u5B57\u91D1\u5E01"
+    - "\u5F97\u5206\u5E95\u677F\u5355\u4EBA"
+    - "\u73A9\u5BB6\u6587\u5B572"
+    - g5
+    - "\u53CC\u4EBA\u6A21\u5F0F\u80DC\u5229"
+    - "\u5956\u52B1\u6587\u5B57\u6700\u9AD8\u5206\u6570"
+    - g1
+    - "\u73A9\u5BB6\u6587\u5B57"
+    - "\u9879\u76EE\u5F97\u5206"
+    - g3
+    spriteTextureGUIDs:
+    - 0592f7fe579748643a3d23248983179f
+    - 05aa0246411f53e4294e9d2233a0ffc2
+    - b2e2a42bd157065448e84e81e5802e1b
+    - 14b1d63036876834caf0218ab20d29e7
+    - 3c4c2d8d91e20bd4fb349115193472ee
+    - 578ef5cc94047e74f8d879a6e43509e9
+    - 73bc3914f899ca44bbc7f24c15edc8e6
+    - 7c28d06c9081d3744be51af6d40da003
+    - 7c7e3ed1706377f4b9ab11fb1046914f
+    - 872066ff65421a34abe4169d28e9aee6
+    - 8ca1568fc1254b746adc0917f006ec13
+    - c432034fdf165b9408e7e73b7267653c
+    - d2077a2e3d59d914da382fb9c63a9cc0
+    - dedf8ab7bb0bc9945a54d662822faccb
+    - ef3e5e011258da14abbb41242739a5f8
+    - f5d370e5f56bb7e42a387aa718d417ae
+    spriteTextureTimeStamps:
+    - 1438423813.13374
+    - 1438424129.32109
+    - 1438966344.1649
+    - 1438423654.61305
+    - 1440683013.75582
+    - 1438424100.74097
+    - 1439290299.13806
+    - 1439199990.67389
+    - 1438423840.3943
+    - 1438424140.81773
+    - 1439462066.13988
+    - 1439290283.40416
+    - 1438424111.22006
+    - 1438423795.37575
+    - 1440675089.9936
+    - 1438424120.06456
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: SongList
+    spriteCollectionGUID: ceaf4e17cb3d35f4c8edb022cc9ca79a
+    spriteCollectionDataGUID: a057b5082183aa141991798d4390e5ef
+    spriteNames:
+    - "\u96BE\u5EA6\u56F0\u96BE"
+    - "\u91D1\u5E01"
+    - "\u786E\u5B9A\u8FD4\u56DE\u9009\u4E2D"
+    - "\u6B4C\u540D\u6761\u7B80\u5355"
+    - 
+    - "\u96BE\u5EA6\u9009\u4E2D"
+    - "\u6B4C\u540D\u6761\u4E0B\u8F7D"
+    - "\u6B4C\u540D\u6761\u8D2D\u7269\u8F66"
+    - "\u5149\u76D8\u9009\u4E2D"
+    - "\u96BE\u5EA6\u7B80\u5355"
+    - "\u91D1\u5E01\u5E95"
+    - 
+    - "\u6B4C\u540D\u6761\u666E\u901A"
+    - "\u96BE\u5EA6\u666E\u901A"
+    - "\u4E0B\u8F7D\u8FDB\u5EA6\u6761"
+    - 
+    - "\u4E0B\u8F7D\u8FDB\u5EA6\u6761\u5E95"
+    - "\u6B4C\u66F2\u6761\u9634\u5F71\u90E8\u5206"
+    - 
+    - "\u6B4C\u540D\u6761\u56F0\u96BE"
+    spriteTextureGUIDs:
+    - 0cf087f7ffbc1844dac871b0a09f034f
+    - 14deac7958205db45863fbfea4fc3e5c
+    - e3ad3b5bc1b5b2f4c98cb095c0307a15
+    - 288710e78dc1cd54aabe3a6e6d0cf9f7
+    - 
+    - 71058179e5c70684fb9a1219ad25cac2
+    - 73f3d49c05aa9b04a8d1f15ed20be9b3
+    - c26c6b90f65173540a6fc2582f7a3611
+    - 7cf01050549e4c44a99af5d3f5e69c36
+    - 84333fef5f117be4597f48cc88b35055
+    - 8cde16ae603e26c46b9067ee0265d309
+    - 
+    - b5cabaa984fcbdb4596490546411eb01
+    - b9cf101b2a2ed194c8baa755d1538fd3
+    - bd8821b338631b245bb2e5355b05c719
+    - 
+    - d23ecf4f1799a02448729a7c855a2276
+    - d6866992ba0831347841c0eb029dcec4
+    - 
+    - f454824bcdd9de44a8b934af50c73b32
+    spriteTextureTimeStamps:
+    - 1438421944.74368
+    - 1438421698.43696
+    - 1438422915.32202
+    - 1438422145.43567
+    - 0
+    - 1438421917.72015
+    - 1438422219.43486
+    - 1438786700.14937
+    - 1438421546.18457
+    - 1438421977.78505
+    - 1438595529.94336
+    - 0
+    - 1438422164.06973
+    - 1438421961.36312
+    - 1438595576.07342
+    - 0
+    - 1438595603.2311
+    - 1438593655.87457
+    - 0
+    - 1438422192.79237
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Title
+    spriteCollectionGUID: 033d68c594122084d8a872542bcf6342
+    spriteCollectionDataGUID: 11865e6d7999b2b4fbaa36c280acd288
+    spriteNames:
+    - "\u5355\u4EBA\u6A21\u5F0F"
+    - yinfu
+    - "\u68C0\u67E5\u66F4\u65B0_en"
+    - "\u5F00\u59CB\u952E"
+    - "\u53CC\u4EBA\u6A21\u5F0F"
+    - "\u661F"
+    - "\u9ED1\u5E95"
+    - "\u68C0\u67E5\u66F4\u65B0"
+    - "\u4E0B\u8F7D\u8FDB\u5EA6\u6761"
+    - "\u4E0B\u8F7D\u8FDB\u5EA6\u6761\u5E95"
+    - "\u5F00\u59CB\u952E_en"
+    - "\u4E2A\u4EBA\u8D26\u6237"
+    spriteTextureGUIDs:
+    - 00f23bc0aff958c4f8205830003d98a7
+    - 4f4123411b3026244b94dcad7385a055
+    - 1834003df2866864485b16b29cfa7467
+    - a1dfeeccd0a090a4e80d18db0fb5fce7
+    - a22adc29f741cc74fb2d7586b12df776
+    - ed12aee4271a8fd4fb0e7fbeb9405864
+    - 6829b4aea5453d84c8396e2f9f5d060f
+    - d3ec8ea00308ae346bf246408b28158c
+    - bd8821b338631b245bb2e5355b05c719
+    - d23ecf4f1799a02448729a7c855a2276
+    - 83978b7cbd49cb04d975ac58396e5430
+    - 711f6e3434087d545a2ac5804f6e8db2
+    spriteTextureTimeStamps:
+    - 1439226709.74734
+    - 1440498387
+    - 1442071788.378
+    - 1439226267.88807
+    - 1439226693.48741
+    - 1439226662.12462
+    - 1439371004.20092
+    - 1439374197.87883
+    - 1438595576.07342
+    - 1438595603.2311
+    - 1442072166.0836
+    - 1447520688.42752
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Utils
+    spriteCollectionGUID: a450f7c10523e7d4eb89a2b6ce070112
+    spriteCollectionDataGUID: 23d11457f48925248a3299214a5aabc8
+    spriteNames:
+    - "\u4FE1\u606F\u6846\u53D6\u6D88"
+    - "\u4FE1\u606F\u6846"
+    - "\u4FE1\u606F\u6846\u786E\u5B9A"
+    - "\u4FE1\u606F\u6846\u9009\u4E2D"
+    - "\u7EDF\u4E00\u8FD4\u56DE"
+    - "\u7EDF\u4E00\u786E\u5B9A"
+    - "\u91D1\u5E01\u5E95"
+    - "\u91D1\u5E01"
+    - "\u786E\u5B9A\u8FD4\u56DE\u9009\u4E2D"
+    - blackbg
+    - whitebg
+    spriteTextureGUIDs:
+    - 24611a0c8554c8243a009ab8d3176022
+    - 267166dca3a975d44b3fff1f06522bdf
+    - 3c05e308f45ce61408bcb120522c612a
+    - 1a93862ad7744cd4dbadcf8a46f2ac8f
+    - df48d42afdc36e445966e8ea13f74823
+    - dfbe3394b3e86a44e916d9c025c074fa
+    - 8cde16ae603e26c46b9067ee0265d309
+    - 14deac7958205db45863fbfea4fc3e5c
+    - b9c0254ed9869004aa3d061f3fa96c0f
+    - d032a1f16041d3b45ae2c0c047cae788
+    - 22af91823d7304741b8aae9b9465f452
+    spriteTextureTimeStamps:
+    - 1438422587.02878
+    - 1438422562.49939
+    - 1438422622.25278
+    - 1438597801.71836
+    - 1439220107.94174
+    - 1439220091.35779
+    - 1438595529.94336
+    - 1438421698.43696
+    - 1438422915.32202
+    - 1438445940.13084
+    - 1439820347.14859
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Guide
+    spriteCollectionGUID: d3a10edeef9a7cd4dbcaf8e08981bcdf
+    spriteCollectionDataGUID: d4a5d2c598061624c9aaab6a6ada29d6
+    spriteNames:
+    - "\u5BF9\u8BDD\u6846"
+    - "\u6309\u952E\u9AD8\u4EAE"
+    - "\u6B4C\u66F2\u7BAD\u5934"
+    - "\u6309\u952E\u5E95\u677F"
+    - BG
+    spriteTextureGUIDs:
+    - 2bcac70fc78f3d04e955a88007a2a457
+    - 38c57cf4bb842db478badf681e5af9bb
+    - 59a1a2b058105394c82a7579a56bc765
+    - aa25427c83c118740a9428165dfd28a6
+    - b89e6943acd131e469024c93d7e2789e
+    spriteTextureTimeStamps:
+    - 1465818313.46921
+    - 1465818052.00925
+    - 1465818475.21546
+    - 1465817985.25944
+    - 1465986268.64478
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3

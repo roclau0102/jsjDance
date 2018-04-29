@@ -1,0 +1,237 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c536d65a3fee7d48a79faa1db190e09, type: 3}
+  m_Name: PlatformDataObj
+  m_EditorClassIdentifier: 
+  "APK\u540D\u79F0": DANCE_MASTER
+  "\u5E73\u53F0\u5217\u8868":
+  - "\u827A\u540D": OS_SHOW
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08_\u663E\u793A\u7248"
+    "\u5E73\u53F0": 2
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 2f12b207881a6da43b5c641f877cd3e7, type: 3}
+    "\u7248\u672C\u53F7": 1.1.4
+    "\u6570\u5B57\u7248\u672C\u53F7": 4
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D": []
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 0
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": WX_SHOW
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 1
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 6b82fb27fa6fb1f4da652a0074c9d84b, type: 3}
+    "\u7248\u672C\u53F7": 1.1.4
+    "\u6570\u5B57\u7248\u672C\u53F7": 4
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D": []
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 0
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": WX_SHOW_NO_REGIST
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 1
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 6b82fb27fa6fb1f4da652a0074c9d84b, type: 3}
+    "\u7248\u672C\u53F7": 1.1.4
+    "\u6570\u5B57\u7248\u672C\u53F7": 4
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D":
+    - {fileID: 102900000, guid: d81e90a16067f3047908009e39808d76, type: 3}
+    - {fileID: 102900000, guid: 13e0149146c8eb84ba94458d9a178cc0, type: 3}
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 1
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": WX_HIDE
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 1
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 14f9268963c030142924b24efd655fa7, type: 3}
+    "\u7248\u672C\u53F7": 1.1.4
+    "\u6570\u5B57\u7248\u672C\u53F7": 4
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D": []
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 1
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": OS_HIDE
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 2
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: c5eab7874a1f07f4388b23ab8f3a5866, type: 3}
+    "\u7248\u672C\u53F7": 1.1.4
+    "\u6570\u5B57\u7248\u672C\u53F7": 4
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D": []
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 1
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": TEL
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 1
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 166ee5ec976fe174fb3ca2a3899e7cfa, type: 3}
+    "\u7248\u672C\u53F7": 1.2.4
+    "\u6570\u5B57\u7248\u672C\u53F7": 4
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D":
+    - {fileID: 102900000, guid: d81e90a16067f3047908009e39808d76, type: 3}
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 1
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": OS_SHOW_LOGIN
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 2
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 2f12b207881a6da43b5c641f877cd3e7, type: 3}
+    "\u7248\u672C\u53F7": 1.1.3
+    "\u6570\u5B57\u7248\u672C\u53F7": 3
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D": []
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 1
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": USB
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 1
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 6b82fb27fa6fb1f4da652a0074c9d84b, type: 3}
+    "\u7248\u672C\u53F7": 1.1.3
+    "\u6570\u5B57\u7248\u672C\u53F7": 3
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D": []
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 0
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": OS_HIDE_NO_REG
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 2
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: c5eab7874a1f07f4388b23ab8f3a5866, type: 3}
+    "\u7248\u672C\u53F7": 1.1.3
+    "\u6570\u5B57\u7248\u672C\u53F7": 3
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D":
+    - {fileID: 102900000, guid: d81e90a16067f3047908009e39808d76, type: 3}
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 1
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": WX_XRDS
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 1
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 14f9268963c030142924b24efd655fa7, type: 3}
+    "\u7248\u672C\u53F7": 1.1.5
+    "\u6570\u5B57\u7248\u672C\u53F7": 5
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D": []
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 1
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": WX_XRDSS_DISPLAY
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 1
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 6b82fb27fa6fb1f4da652a0074c9d84b, type: 3}
+    "\u7248\u672C\u53F7": 1.1.5
+    "\u6570\u5B57\u7248\u672C\u53F7": 5
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D": []
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 1
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": Think
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 1
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: ffa91ae3de8c0674a9bed8a6be737cdc, type: 3}
+    "\u7248\u672C\u53F7": 1.1.4
+    "\u6570\u5B57\u7248\u672C\u53F7": 4
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D":
+    - {fileID: 102900000, guid: 13e0149146c8eb84ba94458d9a178cc0, type: 3}
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 1
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6": []
+  - "\u827A\u540D": SkyWorth_Dis_NoReg
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 1
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 802f0298c7a45f44790f0138bee3d573, type: 3}
+    "\u7248\u672C\u53F7": 1.1.4
+    "\u6570\u5B57\u7248\u672C\u53F7": 4
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D":
+    - {fileID: 102900000, guid: d81e90a16067f3047908009e39808d76, type: 3}
+    - {fileID: 102900000, guid: 13e0149146c8eb84ba94458d9a178cc0, type: 3}
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 0
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6":
+    - "\u590D\u5236\u5230\u76EE\u5F55": Plugins/Android/res/raw
+      "\u6587\u4EF6": {fileID: 102900000, guid: cbf2aaed1e3623a46b3cfcd54b1b80a4,
+        type: 3}
+      filePath: 
+    - "\u590D\u5236\u5230\u76EE\u5F55": Plugins/Android
+      "\u6587\u4EF6": {fileID: 102900000, guid: 50260fdcaf9aa0d4a995fa78a33a0e33,
+        type: 3}
+      filePath: 
+    - "\u590D\u5236\u5230\u76EE\u5F55": Plugins/Android/res/drawable-hdpi
+      "\u6587\u4EF6": {fileID: 2800000, guid: f47e4e521f146994ca5a6c96cd8f9183, type: 3}
+      filePath: 
+    - "\u590D\u5236\u5230\u76EE\u5F55": Plugins/Android/res/drawable-hdpi
+      "\u6587\u4EF6": {fileID: 2800000, guid: 3b616cee493bcb34497bb3594b736249, type: 3}
+      filePath: 
+    - "\u590D\u5236\u5230\u76EE\u5F55": Plugins/Android/res/drawable-hdpi
+      "\u6587\u4EF6": {fileID: 2800000, guid: 10954756dc8f5b1499e4c7ed970e4a1e, type: 3}
+      filePath: 
+    - "\u590D\u5236\u5230\u76EE\u5F55": Plugins/Android/res/drawable-hdpi
+      "\u6587\u4EF6": {fileID: 2800000, guid: 42fe09fa6363cdb45893f34c42f5baa9, type: 3}
+      filePath: 
+    - "\u590D\u5236\u5230\u76EE\u5F55": Plugins/Android/res/layout
+      "\u6587\u4EF6": {fileID: 4900000, guid: d4d35ecbff55f8d40a5746a0386f01d4, type: 3}
+      filePath: 
+  - "\u827A\u540D": HNDX_SHOW_NO_REG_NO_BUY
+    "\u4EA7\u54C1\u540D\u79F0": "\u821E\u52A8\u5927\u5E08"
+    "\u5E73\u53F0": 1
+    "\u8BED\u8A00": 0
+    ManifestXml: {fileID: 4900000, guid: 6b82fb27fa6fb1f4da652a0074c9d84b, type: 3}
+    "\u7248\u672C\u53F7": 1.1.4
+    "\u6570\u5B57\u7248\u672C\u53F7": 4
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D":
+    - {fileID: 102900000, guid: d81e90a16067f3047908009e39808d76, type: 3}
+    - {fileID: 102900000, guid: 13e0149146c8eb84ba94458d9a178cc0, type: 3}
+    "\u4E0D\u53D1\u5E03\u7684\u573A\u666F\u540D\u5B57": []
+    ManifestXmlPath: 
+    "\u662F\u5426\u663E\u793A\u8D2D\u4E70\u56FE": 0
+    "\u81EA\u5B9A\u4E49\u6570\u636E": []
+    "\u590D\u5236\u6587\u4EF6":
+    - "\u590D\u5236\u5230\u76EE\u5F55": Plugins/Android
+      "\u6587\u4EF6": {fileID: 102900000, guid: d367e67b871d531458dd9a723ad7e9bb,
+        type: 3}
+      filePath: 
+    - "\u590D\u5236\u5230\u76EE\u5F55": Plugins/Android
+      "\u6587\u4EF6": {fileID: 102900000, guid: fcd6d7dc0d1c28444bcd702dfc9976c8,
+        type: 3}
+      filePath: 

@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f8f5829467ab54dbe1c67c1b7aaacd, type: 3}
+  m_Name: SounderData
+  m_EditorClassIdentifier: 
+  list:
+  - name: "\u9009\u4E2D\u6B4C\u66F2\u4E0B\u4E00\u9875"
+    clips:
+    - {fileID: 8300000, guid: 6ebe3009a1b06ea45b97cb6bc7bcaf1c, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u5355\u4EBA\u6A21\u5F0F\u5956\u52B1\u91D1\u5E01\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: 1728aa3485e054544a7603005be65d89, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8BC4\u4EF7D"
+    clips:
+    - {fileID: 8300000, guid: 9a1547eb085a0a64ba52f14438eff1b4, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8D2D\u4E70\u9053\u5177\u97F3\u6548\u53D6\u6D88"
+    clips:
+    - {fileID: 8300000, guid: 27a2b6d2a2344994a8aff528d5bc1e17, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u51C6\u5907\u5F00\u59CB\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: 1ba1f20f08b741140a0a18d77748ef2a, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8BC4\u4EF7S"
+    clips:
+    - {fileID: 8300000, guid: 74ba9b3ff674d6243acd77cbcc6db50f, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u6D88\u8D39\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: ee82211a7dc05ca44a36461b27efb552, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8D2D\u4E70\u9053\u5177\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: c31be1b3c4ea50a4f98997e213464946, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u6A21\u5F0F\u9009\u4E2D\u6309\u952E\u97F3"
+    clips:
+    - {fileID: 8300000, guid: 382ed37ad70d437428c414b0c00f1d10, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8D2D\u4E70\u6B4C\u66F2\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: 6a5e628c0e7be8647b1f6b21f22716cf, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u4E00\u4EBA\u5931\u8D25\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: 37a981eb737fd3d459ac01d5f2e7c4ce, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u9053\u5177\u6D88\u8017\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: d5ae197d59a6e224e848ce25864b0fff, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8BC4\u4EF7C"
+    clips:
+    - {fileID: 8300000, guid: dbd5b72acb46ade409d24804fba29ef1, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u9009\u4E2D\u4EBA\u7269\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: 445a6bf3e9f55a54790f16f018774a4c, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u5149\u76D8\u8F6C\u52A8\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: a30459d0bb9548445acf4315203441cc, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8BC4\u4EF7B"
+    clips:
+    - {fileID: 8300000, guid: c6c30d8b4e20e3b4d94f5de02f47f3b7, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u6309\u952E\u62CD\u5B50\u4E0A\u4E0B"
+    clips:
+    - {fileID: 8300000, guid: e8f0677be867a234e95711717f95897e, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u5F00\u59CB\u952E\u6309\u952E\u97F3"
+    clips:
+    - {fileID: 8300000, guid: da4bd448a12c308409ea23a0f39c0fee, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "BAD\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: 61f00131bf1adb34c9348f1855b20aed, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8FD4\u56DE\u6309\u952E"
+    clips:
+    - {fileID: 8300000, guid: 9d58b91bdae297249a8c9828e3e7721e, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u9879\u76EE\u5206\u6570\u5F39\u51FA\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: c3822ae6256f22d44aec2beeaefc9387, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8BC4\u4EF7A"
+    clips:
+    - {fileID: 8300000, guid: 98e2086e3e6d2354d942359a6eb57386, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8FDE\u51FB\u52A0\u6210\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: cd26a629c4f7b794ea1639fddffd2bf1, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u6B4C\u66F2\u5207\u6362\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: c62a4f39ae76218428b1441345d9ccde, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u6E38\u620F\u5B8C\u6210\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: 7b154fb4e5ae11b4e82e4ffc062878e2, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u6309\u952E\u62CD\u5B50\u5DE6\u53F3"
+    clips:
+    - {fileID: 8300000, guid: 5aa1964bf086a7f4db197eb7023836f8, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u5BF9\u8BDD\u6846\u5F39\u51FA\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: c4c72d7eadff0d849864a5a60c340115, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u6309\u952E\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: c5113c928d59b0742a34503c9e3dbb90, type: 3}
+    - {fileID: 8300000, guid: 95b425cf613a6844ab1607844ffbf212, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u80CC\u666F\u97F3\u4E50"
+    clips:
+    - {fileID: 8300000, guid: eafd8e7a83206c745adf39938b4acf63, type: 3}
+    - {fileID: 8300000, guid: 4543d070f71ca184ead5de7cc226c023, type: 3}
+    - {fileID: 8300000, guid: 15cf79baaf27dd64288a067f20ac013a, type: 3}
+    - {fileID: 8300000, guid: 8b7b60d3a14310447aa48fac1c71aea5, type: 3}
+    index: 1
+    isRandom: 1
+  - name: "\u89C2\u4F17\u6B22\u547C\u58F0"
+    clips:
+    - {fileID: 8300000, guid: 359732adc2f6a3241a84910f5d6ed33e, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u6E38\u620F\u5931\u8D25\u97F3\u6548"
+    clips:
+    - {fileID: 8300000, guid: 6c676c0e5a13b7d4dbe2873dd1bc93a1, type: 3}
+    index: 0
+    isRandom: 0
+  - name: "\u8FDE\u51FB\u52A0\u6210\u97F3\u6548100"
+    clips:
+    - {fileID: 8300000, guid: 08db93defd5b66d48aecf7356d9c1a09, type: 3}
+    index: 0
+    isRandom: 0

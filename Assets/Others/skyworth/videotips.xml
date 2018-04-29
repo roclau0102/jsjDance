@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:allowBackup="true"
+    android:paddingBottom="00dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+     
+      <VideoView
+          android:id="@+id/videoView1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ewm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/tips5"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/righticon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/tips3"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/withprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:baselineAlignBottom="true"
+        android:src="@drawable/tips1"
+        android:visibility="visible"
+        android:scaleType="fitXY"
+         />
+
+    <ImageView
+        android:id="@+id/bottombar"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
+        android:layout_marginBottom="0dp"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/tips2"
+        android:visibility="visible" />
+
+</RelativeLayout>

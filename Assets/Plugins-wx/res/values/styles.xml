@@ -1,0 +1,23 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  
+    
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/my_dialog</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    
+    <style name="DialogText">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:paddingTop">8dp</item>
+        
+    </style>
+    <style name="DialogText.Title">
+        <item name="android:textColor">#ffff0000</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+</resources>
