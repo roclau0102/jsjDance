@@ -17,18 +17,18 @@ public class Exit : MonoBehaviour {
     public void OnDisable()
     {
         //旭日东升跳舞毯的左键为330为按钮冲突了~
-        if (Version.currentPlatform.ToString().IndexOf("XRDS") != -1)
-        {
-            //JoystickManager.instance.GetInfaredRay().checkEventEnter = false;
-        }
+        //if (Version.currentPlatform.ToString().IndexOf("XRDS") != -1)
+        //{
+        //    //JoystickManager.instance.GetInfaredRay().checkEventEnter = false;
+        //}
     }
 
     public void OnEnable()
     {
-        if (Version.currentPlatform.ToString().IndexOf("XRDS") != -1)
-        {
-            //JoystickManager.instance.GetInfaredRay().checkEventEnter = true;
-        }
+        //if (Version.currentPlatform.ToString().IndexOf("XRDS") != -1)
+        //{
+        //    //JoystickManager.instance.GetInfaredRay().checkEventEnter = true;
+        //}
     }
 
     

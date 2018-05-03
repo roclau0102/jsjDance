@@ -84,9 +84,9 @@ abstract public  class BaseScene : MonoBehaviour
         JoystickManager.instance.BlanketEvent += instance_BlanketEvent;
     }
 
-    protected abstract void Move(int x, int y, INPUT_TYPE type,JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player);
-    protected abstract void PressEnter(INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player);
-    protected abstract void Cancel(INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player);
+    public abstract void Move(int x, int y, INPUT_TYPE type,JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player);
+    public abstract void PressEnter(INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player);
+    public abstract void Cancel(INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player);
 
     public enum INPUT_TYPE
     {
@@ -108,19 +108,19 @@ abstract public  class BaseScene : MonoBehaviour
         switch (key)
         {            
             case JoystickManager.JOYSTICK_KEY.KEY_UP:
-                if (Version.currentPlatform.ToString().IndexOf("WX_XRDS")!=-1) return;
+                //if (Version.currentPlatform.ToString().IndexOf("WX_XRDS")!=-1) return;
                 if(canPressUp)Move(0, -1, INPUT_TYPE.JOYSTICK, state, player);
                 break;
             case JoystickManager.JOYSTICK_KEY.KEY_DOWN:
-                if (Version.currentPlatform.ToString().IndexOf("WX_XRDS") != -1) return;
+                //if (Version.currentPlatform.ToString().IndexOf("WX_XRDS") != -1) return;
                 if (canPressDown) Move(0, 1, INPUT_TYPE.JOYSTICK, state, player);
                 break;
             case JoystickManager.JOYSTICK_KEY.KEY_LEFT:
-                if (Version.currentPlatform.ToString().IndexOf("WX_XRDS") != -1) return;
+                //if (Version.currentPlatform.ToString().IndexOf("WX_XRDS") != -1) return;
                 if (canPressLeft) Move(-1, 0, INPUT_TYPE.JOYSTICK, state, player);
                 break;
             case JoystickManager.JOYSTICK_KEY.KEY_RIGHT:
-                if (Version.currentPlatform.ToString().IndexOf("WX_XRDS") != -1) return;
+                //if (Version.currentPlatform.ToString().IndexOf("WX_XRDS") != -1) return;
                 if (canPressRight) Move(1, 0, INPUT_TYPE.JOYSTICK, state, player);
                 break;
             case JoystickManager.JOYSTICK_KEY.KEY_OK:
@@ -138,21 +138,21 @@ abstract public  class BaseScene : MonoBehaviour
                 break;
         }
 
-        if (Version.currentPlatform == Version.PLAFTFORM_ENUM.OS_SHOW || Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_SHOW)
-        {
-            if (state == JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN &&
-            key == JoystickManager.JOYSTICK_KEY.KEY_Y)
-            {
-                /*
-                if (JoystickManager.instance.GetKey(JoystickManager.PLAYER_INDEX.P1, JoystickManager.JOYSTICK_KEY.KEY_A, true) &&
-                    JoystickManager.instance.GetKey(JoystickManager.PLAYER_INDEX.P1, JoystickManager.JOYSTICK_KEY.KEY_B, true) &&
-                    JoystickManager.instance.GetKey(JoystickManager.PLAYER_INDEX.P1, JoystickManager.JOYSTICK_KEY.KEY_X, true))
-                {
-                    DataUtils.AddMoney(1000);
-                    Global.CallAndroidStatic("StaticAlert", "加金钱1000");
-                }*/
-            }
-        }        
+        //if (Version.currentPlatform == Version.PLAFTFORM_ENUM.OS_SHOW || Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_SHOW)
+        //{
+        //    if (state == JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN &&
+        //    key == JoystickManager.JOYSTICK_KEY.KEY_Y)
+        //    {
+        //        /*
+        //        if (JoystickManager.instance.GetKey(JoystickManager.PLAYER_INDEX.P1, JoystickManager.JOYSTICK_KEY.KEY_A, true) &&
+        //            JoystickManager.instance.GetKey(JoystickManager.PLAYER_INDEX.P1, JoystickManager.JOYSTICK_KEY.KEY_B, true) &&
+        //            JoystickManager.instance.GetKey(JoystickManager.PLAYER_INDEX.P1, JoystickManager.JOYSTICK_KEY.KEY_X, true))
+        //        {
+        //            DataUtils.AddMoney(1000);
+        //            Global.CallAndroidStatic("StaticAlert", "加金钱1000");
+        //        }*/
+        //    }
+        //}        
     }
 
     public static bool blanketPress = false;    
@@ -217,7 +217,7 @@ abstract public  class BaseScene : MonoBehaviour
                 break;                
             case JoystickManager.BLANKET_NUMBER_KEY.KEY_1:
             case JoystickManager.BLANKET_NUMBER_KEY.KEY_16:
-                if (Application.platform != RuntimePlatform.Android || Version.currentPlatform.ToString().IndexOf("WX_XRDS") != -1)
+                if (Application.platform != RuntimePlatform.Android/* || Version.currentPlatform.ToString().IndexOf("WX_XRDS") != -1*/)
                 {
                     if (canPressCancel)
                     {

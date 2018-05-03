@@ -6,22 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/AutoUpgrade/AutoUpgrade.unity
-  - enabled: 1
-    path: Assets/Scenes/Regist.unity
-  - enabled: 1
     path: Assets/Scenes/Open.unity
+    guid: 8cc005a9968dc9145bd5eaa574e005eb
   - enabled: 1
     path: Assets/Scenes/Title.unity
+    guid: 1eaefcd36b9c67345b7a993d9c59c322
   - enabled: 1
     path: Assets/Scenes/SongList.unity
+    guid: c47ebfaaa7a9be140941e569366d0b21
   - enabled: 1
     path: Assets/Scenes/PropAndPlayer.unity
+    guid: a22f6c19238285442ac2db6dc9604185
   - enabled: 1
     path: Assets/Scenes/Score.unity
+    guid: 2ddf65af33240d64d9d7a102137acc25
   - enabled: 1
     path: Assets/Scenes/Video.unity
+    guid: 1970a0c413f53764aa5f886f8d083cc8
   - enabled: 1
     path: Assets/Scenes/SongList.unity
+    guid: c47ebfaaa7a9be140941e569366d0b21
   - enabled: 1
     path: Assets/Scenes/PlayIdle.unity
+    guid: ccb72313c9e200f4e8c1a472ccb9a7c7

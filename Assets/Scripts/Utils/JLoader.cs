@@ -4,24 +4,29 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 
-public class JLoader : MonoBehaviour {
-	private List<JLoaderInfo> queue = new List<JLoaderInfo>();
-	private List<JLoaderInfo> deleteItem = new List<JLoaderInfo>();
+public class JLoader : MonoBehaviour
+{
+    private List<JLoaderInfo> queue = new List<JLoaderInfo>();
+    private List<JLoaderInfo> deleteItem = new List<JLoaderInfo>();
 
-	static private JLoader _instance=null;
+    static private JLoader _instance = null;
 
-	static public JLoader instance{
-		get{
-			if(_instance==null){
-				GameObject go = new GameObject();
-				go.name = "JLoader";
-				_instance = go.AddComponent<JLoader>();
-			}
-			return _instance;
-		}
-	}
+    static public JLoader instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                GameObject go = new GameObject();
+                go.name = "JLoader";
+                _instance = go.AddComponent<JLoader>();
+            }
+            return _instance;
+        }
+    }
 
-	void Update(){
+    void Update()
+    {
         for (int i = 0, c = queue.Count; i < c; i++)
         {
             JLoaderInfo info = queue[i];
@@ -43,7 +48,7 @@ public class JLoader : MonoBehaviour {
             //}
             //else
             //{
-                info.callback(DOWNLOAD_TYPE.PROGRESS, info);
+            info.callback(DOWNLOAD_TYPE.PROGRESS, info);
             //}
         }
 
@@ -58,26 +63,27 @@ public class JLoader : MonoBehaviour {
 
     }
 
-	public enum DOWNLOAD_TYPE{
-		PROGRESS,
-		FAILED,
-		SUCCESS
-	}
+    public enum DOWNLOAD_TYPE
+    {
+        PROGRESS,
+        FAILED,
+        SUCCESS
+    }
 
     public JLoaderInfo Load(string url, object userdata, Action<DOWNLOAD_TYPE, JLoaderInfo> callback)
     {
-		JLoaderInfo info = new JLoaderInfo();
-		info.url = url;
-		info.callback = callback;
+        JLoaderInfo info = new JLoaderInfo();
+        info.url = url;
+        info.callback = callback;
         //info.www = new WWW(url);
         info.userData = userdata;
         queue.Add(info);
-        if (url.EndsWith("wav")||url.EndsWith("mp3"))
+        if (url.EndsWith("wav") || url.EndsWith("mp3"))
             StartCoroutine(DownloadSong(info));
         else
             StartCoroutine(Download(info));
         return info;
-	}
+    }
 
     IEnumerator Download(JLoaderInfo info)
     {
@@ -85,16 +91,16 @@ public class JLoader : MonoBehaviour {
         {
             info.result = info.www.Send();
             yield return info.result;
-          
-            if (info.www.isError)
-            {
-                Debug.Log(info.www.url + ":下载失败-" + info.www.error);
-                info.callback(DOWNLOAD_TYPE.FAILED, info);
-            }
-            else
+
+            if (!info.www.isNetworkError || string.IsNullOrEmpty(info.www.error))
             {
                 Debug.Log(info.www.url + ":下载成功");
                 info.callback(DOWNLOAD_TYPE.SUCCESS, info);
+            }
+            else
+            {
+                Debug.Log(info.www.url + ":下载失败-" + info.www.error);
+                info.callback(DOWNLOAD_TYPE.FAILED, info);
             }
             queue.Remove(info);
         }
@@ -104,26 +110,25 @@ public class JLoader : MonoBehaviour {
     IEnumerator DownloadSong(JLoaderInfo info)
     {
         if (info.url.EndsWith("mp3"))
-            info.www = UnityWebRequest.GetAudioClip(info.url, AudioType.MPEG);
+            info.www = UnityWebRequestMultimedia.GetAudioClip(info.url, AudioType.MPEG);
         else if (info.url.EndsWith("wav"))
-            info.www = UnityWebRequest.GetAudioClip(info.url, AudioType.WAV);
+            info.www = UnityWebRequestMultimedia.GetAudioClip(info.url, AudioType.WAV);
 
-        info.result = info.www.Send();
+        info.result = info.www.SendWebRequest();
         yield return info.result;
 
-        if (info.www.isError)
-        {
-            Debug.Log(info.www.url + ":下载失败");
-            info.callback(DOWNLOAD_TYPE.FAILED, info);
-        }
-        else
+        if (!info.www.isNetworkError || string.IsNullOrEmpty(info.www.error))
         {
             Debug.Log(info.www.url + ":下载成功");
             info.callback(DOWNLOAD_TYPE.SUCCESS, info);
         }
+        else
+        {
+            Debug.Log(info.www.url + ":下载失败");
+            info.callback(DOWNLOAD_TYPE.FAILED, info);
+        }
         info.www.Dispose();
         queue.Remove(info);
-
     }
 
     internal void Remove(JLoaderInfo info)
@@ -134,10 +139,11 @@ public class JLoader : MonoBehaviour {
 }
 
 
-public class JLoaderInfo{
-	public string url;
-	public System.Action<JLoader.DOWNLOAD_TYPE,JLoaderInfo> callback;
-	public UnityWebRequest www;
+public class JLoaderInfo
+{
+    public string url;
+    public System.Action<JLoader.DOWNLOAD_TYPE, JLoaderInfo> callback;
+    public UnityWebRequest www;
     public object userData;
     public AsyncOperation result;
 }

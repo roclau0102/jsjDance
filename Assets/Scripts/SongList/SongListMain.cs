@@ -42,18 +42,18 @@ public class SongListMain : BaseScene
 
     private void Update()
     {
-        if (Version.currentPlatform == Version.PLAFTFORM_ENUM.SkyWorth_Dis_NoReg)
-        {
-            if (Time.time - pressTime > 15)
-            {
-                if (!DataUtils.isAutoMode)
-                {
-                    DataUtils.isAutoMode = true;
-                    DataUtils.runingAutoMode = true;
-                    AutoGoNext();
-                }
-            }
-        }
+        //if (Version.currentPlatform == Version.PLAFTFORM_ENUM.SkyWorth_Dis_NoReg)
+        //{
+        //    if (Time.time - pressTime > 15)
+        //    {
+        //        if (!DataUtils.isAutoMode)
+        //        {
+        //            DataUtils.isAutoMode = true;
+        //            DataUtils.runingAutoMode = true;
+        //            AutoGoNext();
+        //        }
+        //    }
+        //}
     }
 
     void AutoGoNext()
@@ -86,7 +86,7 @@ public class SongListMain : BaseScene
 
 
 
-    protected override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (!GetCanPress()) return;
 
@@ -126,7 +126,12 @@ public class SongListMain : BaseScene
         }
     }
 
-    protected override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public void SelectDifficult(int x)
+    {
+        difficult.Set(x);
+    }
+
+    public override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (SongCard.IsDownloading())
         {
@@ -150,23 +155,28 @@ public class SongListMain : BaseScene
         {
             if (list.Press())
             {
-                //去下个界面
-                DataUtils.songDataID = list.GetSelectData();
-                Sounder.instance.Play("选中歌曲下一页");
-                switch (DataUtils.mode)
-                {
-                    case Global.MODE.MODE_1P:
-                        LoadLevel("PropAndPlayer");
-                        break;
-                    case Global.MODE.MODE_2P:
-                        LoadLevel("Video");
-                        break;
-                }
+                GoNext();
             }
         }
     }
 
-    protected override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    //去下个界面
+    public void GoNext()
+    {
+        DataUtils.songDataID = list.GetSelectData();
+        Sounder.instance.Play("选中歌曲下一页");
+        switch (DataUtils.mode)
+        {
+            case Global.MODE.MODE_1P:
+                LoadLevel("PropAndPlayer");
+                break;
+            case Global.MODE.MODE_2P:
+                LoadLevel("Video");
+                break;
+        }
+    }
+
+    public override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (SongCard.IsDownloading())
         {

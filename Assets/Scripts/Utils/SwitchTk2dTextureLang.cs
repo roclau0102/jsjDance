@@ -9,12 +9,12 @@ public class SwitchTk2dTextureLang : MonoBehaviour
 	// Use this for initialization
 	void Start () {
         sprite = GetComponent<tk2dSpriteFromTexture>();
-        if (Version.IsEN() && enTexture2d!=null)
-        {
-            if(sprite.texture!= enTexture2d){
-                sprite.texture = enTexture2d;
-                sprite.ForceBuild();
-            }
-        }
+        //if (Version.IsEN() && enTexture2d!=null)
+        //{
+        //    if(sprite.texture!= enTexture2d){
+        //        sprite.texture = enTexture2d;
+        //        sprite.ForceBuild();
+        //    }
+        //}
 	}
 }

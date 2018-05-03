@@ -64,7 +64,7 @@ public class Character : BaseScene
 
     float pressTime=0;
 
-    protected override void Move(int x, int y, BaseScene.INPUT_TYPE type,JoystickManager.JOYSTICK_KEY_STATE keyState,JoystickManager.PLAYER_INDEX player )
+    public override void Move(int x, int y, BaseScene.INPUT_TYPE type,JoystickManager.JOYSTICK_KEY_STATE keyState,JoystickManager.PLAYER_INDEX player )
     {
         if (hasSelect) return;
         if ((Time.time - pressTime) < 0.5f) return;
@@ -130,7 +130,7 @@ public class Character : BaseScene
         lockSprite.SetActive(cards[index - 1].isLock);                
     }
 
-    protected override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (hasSelect) return;
         if (downloading)
@@ -220,7 +220,7 @@ public class Character : BaseScene
                 if (per == -1)
                 {
                     downloading = false;
-                    alert.Show(info.www.error);
+                    alert.Show("网络异常或磁盘容量不足");
                     Sounder.instance.Play("BAD音效");
                     if (confirm.gameObject.activeSelf) confirm.gameObject.SetActive(false);
                 }
@@ -267,7 +267,7 @@ public class Character : BaseScene
         LoadLevel("Video");
     }
 
-    protected override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (hasSelect) return;
         Sounder.instance.Play("返回按键");

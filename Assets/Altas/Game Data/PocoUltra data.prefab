@@ -5,10 +5,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
   m_Layer: 0
   m_Name: PocoUltra data
   m_TagString: Untagged
@@ -27,6 +27,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -39,7 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  lineHeight: .539999962
+  lineHeight: 0.53999996
   chars:
   - p0: {x: 0, y: 0, z: 0}
     p1: {x: 0, y: 0, z: 0}
@@ -617,93 +619,93 @@ MonoBehaviour:
     - {x: 0, y: 0}
     advance: 0
     channel: 0
-  - p0: {x: .0299999993, y: .479999989, z: 0}
-    p1: {x: .48999998, y: .0399999991, z: 0}
-    uv0: {x: .0546875, y: .882324219, z: 0}
-    uv1: {x: .099609375, y: .860839844, z: 0}
+  - p0: {x: 0.03, y: 0.48, z: 0}
+    p1: {x: 0.48999998, y: 0.04, z: 0}
+    uv0: {x: 0.0546875, y: 0.8823242, z: 0}
+    uv1: {x: 0.099609375, y: 0.86083984, z: 0}
     flipped: 0
     gradientUv: []
-    advance: .479999989
+    advance: 0.48
     channel: 0
-  - p0: {x: .0299999993, y: .479999989, z: 0}
-    p1: {x: .340000004, y: .0399999991, z: 0}
-    uv0: {x: .35546875, y: .928710938, z: 0}
-    uv1: {x: .3984375, y: .913574219, z: 0}
+  - p0: {x: 0.03, y: 0.48, z: 0}
+    p1: {x: 0.34, y: 0.04, z: 0}
+    uv0: {x: 0.35546875, y: 0.92871094, z: 0}
+    uv1: {x: 0.3984375, y: 0.9135742, z: 0}
     flipped: 1
     gradientUv: []
-    advance: .329999983
+    advance: 0.32999998
     channel: 0
-  - p0: {x: .0299999993, y: .479999989, z: 0}
-    p1: {x: .48999998, y: .0399999991, z: 0}
-    uv0: {x: .103515625, y: .882324219, z: 0}
-    uv1: {x: .1484375, y: .860839844, z: 0}
+  - p0: {x: 0.03, y: 0.48, z: 0}
+    p1: {x: 0.48999998, y: 0.04, z: 0}
+    uv0: {x: 0.103515625, y: 0.8823242, z: 0}
+    uv1: {x: 0.1484375, y: 0.86083984, z: 0}
     flipped: 0
     gradientUv: []
-    advance: .479999989
+    advance: 0.48
     channel: 0
-  - p0: {x: .0299999993, y: .479999989, z: 0}
-    p1: {x: .48999998, y: .0399999991, z: 0}
-    uv0: {x: .15234375, y: .8828125, z: 0}
-    uv1: {x: .1953125, y: .860351562, z: 0}
+  - p0: {x: 0.03, y: 0.48, z: 0}
+    p1: {x: 0.48999998, y: 0.04, z: 0}
+    uv0: {x: 0.15234375, y: 0.8828125, z: 0}
+    uv1: {x: 0.1953125, y: 0.86035156, z: 0}
     flipped: 1
     gradientUv: []
-    advance: .479999989
+    advance: 0.48
     channel: 0
-  - p0: {x: .0299999993, y: .479999989, z: 0}
-    p1: {x: .48999998, y: .0399999991, z: 0}
-    uv0: {x: .19921875, y: .8828125, z: 0}
-    uv1: {x: .2421875, y: .860351562, z: 0}
+  - p0: {x: 0.03, y: 0.48, z: 0}
+    p1: {x: 0.48999998, y: 0.04, z: 0}
+    uv0: {x: 0.19921875, y: 0.8828125, z: 0}
+    uv1: {x: 0.2421875, y: 0.86035156, z: 0}
     flipped: 1
     gradientUv: []
-    advance: .479999989
+    advance: 0.48
     channel: 0
-  - p0: {x: .0299999993, y: .479999989, z: 0}
-    p1: {x: .48999998, y: .0399999991, z: 0}
-    uv0: {x: .24609375, y: .8828125, z: 0}
-    uv1: {x: .2890625, y: .860351562, z: 0}
+  - p0: {x: 0.03, y: 0.48, z: 0}
+    p1: {x: 0.48999998, y: 0.04, z: 0}
+    uv0: {x: 0.24609375, y: 0.8828125, z: 0}
+    uv1: {x: 0.2890625, y: 0.86035156, z: 0}
     flipped: 1
     gradientUv: []
-    advance: .479999989
+    advance: 0.48
     channel: 0
-  - p0: {x: .0299999993, y: .479999989, z: 0}
-    p1: {x: .48999998, y: .0399999991, z: 0}
-    uv0: {x: .29296875, y: .8828125, z: 0}
-    uv1: {x: .3359375, y: .860351562, z: 0}
+  - p0: {x: 0.03, y: 0.48, z: 0}
+    p1: {x: 0.48999998, y: 0.04, z: 0}
+    uv0: {x: 0.29296875, y: 0.8828125, z: 0}
+    uv1: {x: 0.3359375, y: 0.86035156, z: 0}
     flipped: 1
     gradientUv: []
-    advance: .479999989
+    advance: 0.48
     channel: 0
-  - p0: {x: .0299999993, y: .479999989, z: 0}
-    p1: {x: .48999998, y: .0399999991, z: 0}
-    uv0: {x: .493164062, y: .875976562, z: 0}
-    uv1: {x: .536132812, y: .853515625, z: 0}
+  - p0: {x: 0.03, y: 0.48, z: 0}
+    p1: {x: 0.48999998, y: 0.04, z: 0}
+    uv0: {x: 0.49316406, y: 0.87597656, z: 0}
+    uv1: {x: 0.5361328, y: 0.8535156, z: 0}
     flipped: 1
     gradientUv: []
-    advance: .479999989
+    advance: 0.48
     channel: 0
-  - p0: {x: .0299999993, y: .479999989, z: 0}
-    p1: {x: .48999998, y: .0399999991, z: 0}
-    uv0: {x: .875976562, y: .782226562, z: 0}
-    uv1: {x: .918945312, y: .759765625, z: 0}
+  - p0: {x: 0.03, y: 0.48, z: 0}
+    p1: {x: 0.48999998, y: 0.04, z: 0}
+    uv0: {x: 0.87597656, y: 0.78222656, z: 0}
+    uv1: {x: 0.9189453, y: 0.7597656, z: 0}
     flipped: 1
     gradientUv: []
-    advance: .479999989
+    advance: 0.48
     channel: 0
-  - p0: {x: .0299999993, y: .479999989, z: 0}
-    p1: {x: .48999998, y: .0399999991, z: 0}
-    uv0: {x: .732421875, y: .876464844, z: 0}
-    uv1: {x: .775390625, y: .854003906, z: 0}
+  - p0: {x: 0.03, y: 0.48, z: 0}
+    p1: {x: 0.48999998, y: 0.04, z: 0}
+    uv0: {x: 0.7324219, y: 0.87646484, z: 0}
+    uv1: {x: 0.7753906, y: 0.8540039, z: 0}
     flipped: 1
     gradientUv: []
-    advance: .479999989
+    advance: 0.48
     channel: 0
-  - p0: {x: .0299999993, y: .419999987, z: 0}
-    p1: {x: .189999998, y: .099999994, z: 0}
-    uv0: {x: .981445312, y: .603515625, z: 0}
-    uv1: {x: .997070312, y: .587890625, z: 0}
+  - p0: {x: 0.03, y: 0.42, z: 0}
+    p1: {x: 0.19, y: 0.099999994, z: 0}
+    uv0: {x: 0.9814453, y: 0.6035156, z: 0}
+    uv1: {x: 0.9970703, y: 0.5878906, z: 0}
     flipped: 0
     gradientUv: []
-    advance: .239999995
+    advance: 0.24
     channel: 0
   charDictKeys: 
   charDictValues: []
@@ -717,12 +719,12 @@ MonoBehaviour:
   spriteCollection: {fileID: 11400000, guid: 155f280cec315bd419b1c04d790d06d7, type: 2}
   useDictionary: 0
   kerning: []
-  largestWidth: .479999989
+  largestWidth: 0.48
   material: {fileID: 2100000, guid: 279026a2a4e93b34ebf8f4499d5c4771, type: 2}
   gradientTexture: {fileID: 0}
   textureGradients: 0
   gradientCount: 1
-  texelSize: {x: .00999999978, y: .00999999978}
+  texelSize: {x: 0.01, y: 0.01}
   invOrthoSize: 2
   halfTargetHeight: 50
 --- !u!1001 &100100000
@@ -736,4 +738,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

@@ -37,17 +37,17 @@ public class BlanketBuyTips : BaseScene {
     {
         startCheck = true;        
 
-        if (Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_SHOW_NO_REGIST ||
-            Version.currentPlatform== Version.PLAFTFORM_ENUM.TEL ||
-            Version.currentPlatform == Version.PLAFTFORM_ENUM.OS_SHOW ||
-            Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_SHOW ||
-            Version.IsOS() || Version.currentPlatform == Version.PLAFTFORM_ENUM.USB
-            )
-        {
-            if (successCallback!=null) successCallback();
-            RemoveKeyEvent();
-            return;
-        }
+        //if (Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_SHOW_NO_REGIST ||
+        //    Version.currentPlatform== Version.PLAFTFORM_ENUM.TEL ||
+        //    Version.currentPlatform == Version.PLAFTFORM_ENUM.OS_SHOW ||
+        //    Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_SHOW ||
+        //    Version.IsOS() || Version.currentPlatform == Version.PLAFTFORM_ENUM.USB
+        //    )
+        //{
+        //    if (successCallback!=null) successCallback();
+        //    RemoveKeyEvent();
+        //    return;
+        //}
 
         if (step == TIPS_CHECK_STEP.DONE)
         {
@@ -92,14 +92,14 @@ public class BlanketBuyTips : BaseScene {
                 else
                 {
                     Debug.Log("5");
-                    if (Version.IsOS())
-                    {
-                        sprite.texture = osTexture;
-                    }
-                    else if (Version.IsWX())
-                    {
-                        sprite.texture = wxTexture;
-                    }
+                    //if (Version.IsOS())
+                    //{
+                    //    sprite.texture = osTexture;
+                    //}
+                    //else if (Version.IsWX())
+                    //{
+                    //    sprite.texture = wxTexture;
+                    //}
                     step = TIPS_CHECK_STEP.CHECKING;
                     sprite.ForceBuild();
                     sprite.gameObject.SetActive(true);
@@ -140,7 +140,7 @@ public class BlanketBuyTips : BaseScene {
     }
 
 
-    protected override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         Debug.Log("press " + x + "," + y);
         if (keyState == JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN)
@@ -150,7 +150,7 @@ public class BlanketBuyTips : BaseScene {
         return;
     }
 
-    protected override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         Debug.Log("press Enter");
         if (keyState == JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN)
@@ -159,7 +159,7 @@ public class BlanketBuyTips : BaseScene {
         }        
     }
 
-    protected override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         Debug.Log("press cancel");
         if (keyState == JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN && type == INPUT_TYPE.JOYSTICK)

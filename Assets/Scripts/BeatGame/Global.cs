@@ -56,6 +56,8 @@ public class Global : MonoBehaviour {
 
     void Awake()
     {
+        Logcat.Instance.Init();
+
         InitJO();
     }
 
@@ -91,8 +93,10 @@ public class Global : MonoBehaviour {
         #if UNITY_EDITOR
             //path = path.Replace("/", "\\");
             path = "file:///" + path;
-        #endif
-            return path;
+#elif UNITY_ANDROID
+        path = "jar:file://" + Application.dataPath + "!/assets/" + filePath;
+#endif
+        return path;
     }
 
     public static void ShowTips(string s)
@@ -261,20 +265,13 @@ public class Global : MonoBehaviour {
             TableManager.Init();
             DataUtils.instance.transform.parent = go.transform;
             Sounder.instance.transform.parent = go.transform;
-            if (playMusic) Sounder.instance.Play("背景音乐", true);
-
-            
+            if (playMusic)
+                Sounder.instance.Play("背景音乐", true);
 
             int v = DataUtils.AddLoginTime();
             if (v == 1)
             {
-                if (Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_SHOW)
-                {
-                    DataUtils.AddMoney(99999999);
-                }else  if ( Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_SHOW_NO_REGIST || Version.currentPlatform == Version.PLAFTFORM_ENUM.TEL)
-                {
-                    DataUtils.AddMoney(3000);
-                }                
+                 DataUtils.AddMoney(3000);
             }
         }
         instance.LoadMusicConfig(() => {
@@ -538,7 +535,7 @@ public class Global : MonoBehaviour {
                 case JLoader.DOWNLOAD_TYPE.SUCCESS:
                     str = Encoding.Unicode.GetString(info.www.downloadHandler.data);
                     //str = info.www.downloadHandler.text;
-                    Debug.Log(str);
+                    //Debug.Log(str);
                     if (string.IsNullOrEmpty(str)||!str.StartsWith("id"))
                     {
                         Debug.LogWarning("发生网络异常，加载本地data表");
@@ -685,18 +682,18 @@ public class Global : MonoBehaviour {
 
     internal static bool IsOverlayMode()
     {
-#if UNITY_ANDROID
-        if (Application.platform == RuntimePlatform.Android) {
-            InitJO();
-            return currentActivity.Get<bool>("overlayMode");
-        }
-        else
-        {            
-            return false;
-        }        
-#else
+//#if UNITY_ANDROID
+//        if (Application.platform == RuntimePlatform.Android) {
+//            InitJO();
+//            return currentActivity.Get<bool>("overlayMode");
+//        }
+//        else
+//        {            
+//            return false;
+//        }        
+//#else
         return true;
-#endif
+//#endif
     }
 }
 

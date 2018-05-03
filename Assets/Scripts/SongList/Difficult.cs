@@ -24,25 +24,29 @@ public class Difficult : MonoBehaviour {
 
     internal void Move(int p)
     {
-        int lastIndex = index;
-        index += p;
-        if (index < 0)
+        int newIndex = index + p;
+        if (newIndex < 0)
         {
-            index = 0;
+            newIndex = 0;
         }
-        else if (index >( btns.Length-1))
+        else if (newIndex > ( btns.Length-1))
         {
-            index = btns.Length-1;
+            newIndex = btns.Length-1;
         }
 
+        Set(newIndex);
+    }
+
+    internal void Set(int newIndex)
+    {
         if (changeCallback != null)
         {
-            changeCallback((SongInfo.DIFF_LEVEL)index);
+            changeCallback((SongInfo.DIFF_LEVEL)newIndex);
         }
 
         for (int i = 0; i < btns.Length; i++)
         {
-            if (i == index)
+            if (i == newIndex)
             {
                 btns[i].transform.Find("Light").gameObject.SetActive(true);
                 btns[i].GetComponent<Animation>().Play("DiffZoomLarge");
@@ -50,9 +54,11 @@ public class Difficult : MonoBehaviour {
             else
             {
                 btns[i].transform.Find("Light").gameObject.SetActive(false);
-                if (lastIndex== i) btns[i].GetComponent<Animation>().Play("DiffZoomNormal");
+                if (index == i) btns[i].GetComponent<Animation>().Play("DiffZoomNormal");
             }
         }
+
+        index = newIndex;
     }
 
 

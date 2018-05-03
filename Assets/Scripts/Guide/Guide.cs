@@ -213,7 +213,7 @@ public class Guide : BaseScene {
     }
 
 
-    protected override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (!canOperate) return;
         switch (index)
@@ -234,7 +234,7 @@ public class Guide : BaseScene {
 
 
 
-    protected override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (!canOperate) return;
         if (keyState != JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN) return;
@@ -266,7 +266,7 @@ public class Guide : BaseScene {
         }
     }
 
-    protected override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (!canOperate) return;
         if (keyState != JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN) return;

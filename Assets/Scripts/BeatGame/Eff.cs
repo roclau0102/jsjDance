@@ -40,7 +40,6 @@ public class Eff : MonoBehaviour
     {
         combo100[playerIndex] = b;
 
-        if (Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_XRDS || Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_XRDSS_DISPLAY) return;
         if (combo100[0] || combo100[1])
         {
             combo100Eff.SetActive(true);

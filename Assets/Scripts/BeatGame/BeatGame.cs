@@ -125,7 +125,7 @@ public class BeatGame : BaseScene
         //    }
         //}
 
-        video.url = "file://" + DataUtils.songVideos + ".mp4";
+        video.url = /*"file:///" + */DataUtils.songVideos + ".mp4";
         video.Play();
         Debug.Log("play video");
     }
@@ -144,46 +144,8 @@ public class BeatGame : BaseScene
         else
         {
             audioSource.clip = songInfo.songClip;
-            if (Application.platform != RuntimePlatform.WindowsEditor)
-            {
-                if (Version.currentPlatform.ToString().IndexOf("WX_XRDS") != -1) //旭日东升用自己的 checkhand
-                {
-                    xrdsCheckHand.doneCall = CheckHandCallback;
-                    xrdsCheckHand.failedCall = () =>
-                    {
-                        syncDoAction = () =>
-                        {
-                            LoadLevel("SongList", false, false);
-                        };
-                    };
-                    xrdsCheckHand.gameObject.SetActive(true);
-                }
-                else
-                {
-                    //不显示购买
-                    if (Version.SHOW_BUY_TIPS)
-                    {
-                        CheckHand.doneCallback = CheckHandCallback;
-                        CheckHand.failedCallback = () =>
-                        {
-                            syncDoAction = () =>
-                            {
-                                LoadLevel("SongList", false, false);
-                            };
-                        };
-                        CheckHand.Show();
-                    }
-                    else
-                    {
-                        CheckHandCallback();
-                        return;
-                    }
-                } 
-            }
-            else
-            {
-                CheckHandCallback();
-            }
+            
+            CheckHandCallback();
         } 
     }
 
@@ -404,7 +366,7 @@ public class BeatGame : BaseScene
     }
 
     float keyTime = 0;
-    protected override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (keyState == JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN && pauseUI.gameObject.activeSelf)
         {
@@ -452,7 +414,7 @@ public class BeatGame : BaseScene
 
     
 
-    protected override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (playState == PLAY_STATE.GAME_OVER)
         {
@@ -471,7 +433,7 @@ public class BeatGame : BaseScene
 
 
 
-    protected override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         //if (type == INPUT_TYPE.BLANKET && Application.platform== RuntimePlatform.Android) return;
        

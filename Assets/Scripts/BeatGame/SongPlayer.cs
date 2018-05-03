@@ -116,12 +116,12 @@ public class SongPlayer : MonoBehaviour
     void RefreshHP(float minusHP = 1)
     {
         //这个平台不扣血啦
-        if (Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_SHOW_NO_REGIST ||
-            Version.currentPlatform == Version.PLAFTFORM_ENUM.TEL
-            )
-        {
-            minusHP = 0;
-        }
+        //if (Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_SHOW_NO_REGIST ||
+        //    Version.currentPlatform == Version.PLAFTFORM_ENUM.TEL
+        //    )
+        //{
+        //    minusHP = 0;
+        //}
         hp -= minusHP;
         if(hp>hpMax){
             hp = hpMax;

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Title : BaseScene, ICW_AttachScene
+public class Title : BaseScene
 {
 
     public GameObject model;
@@ -27,10 +27,6 @@ public class Title : BaseScene, ICW_AttachScene
     {
         startText.SetActive(false);
         loading.SetActive(true);
-        if (Global.IsOverlayMode())
-        {
-            Global.CallAndroidStatic("StaticHideVideo");
-        }
 
         Global.init(() =>
         {
@@ -51,25 +47,6 @@ public class Title : BaseScene, ICW_AttachScene
 
         texture = textureWX;
 
-
-        if (Version.currentPlatform.ToString().IndexOf("XRDS") != -1)
-        {
-            JoystickManager.instance.blanketType = JoystickManager.BLANKET_TYPE.东升旭日;
-            JoystickManager.instance.joystickType = JoystickManager.JOYSTICK_TYPE.INFARED_RAY;
-            JoystickManager.instance.GetInfaredRay().checkEventEnter = false;
-            JoystickManager.instance.autoCheckJoyStickType = false;
-        }
-        else
-        {
-            if (CheckHand.instance == null)
-            {
-                CheckHand.Init(
-                 CheckHand.TYPE.BLANKET, texture,
-                Version.IsWX()
-             );
-            }
-        }
-
         pressTime = Time.time;
 
     }
@@ -81,43 +58,7 @@ public class Title : BaseScene, ICW_AttachScene
 
     void Update()
     {
-        if (Version.currentPlatform == Version.PLAFTFORM_ENUM.SkyWorth_Dis_NoReg)
-        {
-            if ((Time.time - pressTime) > 15f)
-            {
-                //if (Application.platform == RuntimePlatform.Android)
-                //{
-                //    activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer")
-                //   .GetStatic<AndroidJavaObject>("currentActivity");
-                //    state = activity.Get<int>("usbhid_state");
-                //}
 
-                ///
-                //if (state != 4)
-                //{
-                //CW.Instance.SetState(CW.STATE.自动演示中);
-                //}
-
-
-                ///在主菜单界面无操作15s后，自动演示.若未接入跳舞毯，演示30s后，返回主菜单；若已接入跳舞毯，则一直演示下去。
-
-                if (CW.Instance != null)
-                {
-                    CW.Instance.autoPlayTimer.endable = true;
-                    CW.Instance.autoPlayTimer.SaveTime();
-
-                    CW.Instance.SetState(CW.STATE.自动演示中);
-                    Debug.Log("自动演示");                    
-                }
-
-                pressTime = Time.time;
-                DataUtils.isAutoMode = true;
-                DataUtils.runingAutoMode = true;
-                LoadLevel("SongList");
-
-                Debug.Log("load songlisg");
-            }
-        }
     }
 
 
@@ -140,20 +81,6 @@ public class Title : BaseScene, ICW_AttachScene
         startText.SetActive(true);
         loading.SetActive(false);
         inited = true;
-
-        if (Version.currentPlatform != Version.PLAFTFORM_ENUM.SkyWorth_Dis_NoReg)
-        {
-            if (Guide.instance != null)
-            {
-                Guide.instance.Show();
-            }
-        }
-        else
-        {
-            if (Guide.instance != null) Guide.instance.Free();
-        }
-
-
     }
 
 
@@ -169,7 +96,7 @@ public class Title : BaseScene, ICW_AttachScene
     int pIndex = 1;
 
 
-    protected override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (keyState != JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN) return;
         if ((Time.time - keyTime) < 0.3f) return;
@@ -214,7 +141,7 @@ public class Title : BaseScene, ICW_AttachScene
         }
     }
 
-    protected override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (!inited) return;
         if ((Time.time - keyTime) < 0.3f) return;
@@ -231,13 +158,24 @@ public class Title : BaseScene, ICW_AttachScene
         {
             if (canEnter)
             {
-                Sounder.instance.Play("模式选中按键音");
-                model.SetActive(true);
+                EnterSelectMode();
             }
             return;
         }
 
         RemoveKeyEvent();
+
+        EnterNext();
+    }
+
+    public void EnterSelectMode()
+    {
+        Sounder.instance.Play("模式选中按键音");
+        model.SetActive(true);
+    }
+
+    public void EnterNext()
+    {
         DataUtils.mode = (Global.MODE)(pIndex - 1);
 
         switch (DataUtils.mode)
@@ -253,12 +191,24 @@ public class Title : BaseScene, ICW_AttachScene
         Invoke("GoNext", 0.5f);
     }
 
+    public void EnterSingleMode()
+    {
+        pIndex = 1;
+        EnterNext();
+    }
+
+    public void EnterDualMode()
+    {
+        pIndex = 2;
+        EnterNext();
+    }
+
     void GoNext()
     {
         LoadLevel("SongList");
     }
 
-    protected override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (!canCancle) return;
         if (WXLoginInfoPanel.instance != null && WXLoginInfoPanel.instance.loginUI != null && WXLoginInfoPanel.instance.loginUI.activeSelf) return;

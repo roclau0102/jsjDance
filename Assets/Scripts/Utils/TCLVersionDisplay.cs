@@ -12,9 +12,9 @@ public class TCLVersionDisplay : MonoBehaviour
 
     void Update()
     {
-        if (Version.currentPlatform == Version.PLAFTFORM_ENUM.TEL)
-        {
-            gameObject.SetActive(false);
-        }
+        //if (Version.currentPlatform == Version.PLAFTFORM_ENUM.TEL)
+        //{
+        //    gameObject.SetActive(false);
+        //}
     }
 }

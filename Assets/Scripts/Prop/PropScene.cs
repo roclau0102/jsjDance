@@ -111,7 +111,7 @@ public class PropScene : BaseScene {
                 if (per == -1)
                 {
                     downloading = false;
-                    alert.Show("下载被终止");
+                    alert.Show("网络异常或磁盘容量不足");
                     Sounder.instance.Play("BAD音效");
                     if (confirm.gameObject.activeSelf) confirm.gameObject.SetActive(false);
                 }
@@ -225,7 +225,7 @@ public class PropScene : BaseScene {
 
     public BasePropItem curItem;
 
-    protected override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         if (Time.time - pressTime < 0.3f) return;
 
@@ -244,8 +244,6 @@ public class PropScene : BaseScene {
             return;
         }
 
-        
-        
         if (curItem==null || curItem == okBtn)
         {
             okBtnFrame.SetActive(false);
@@ -254,7 +252,7 @@ public class PropScene : BaseScene {
         else
         {
             FocusOnItem(curItem, x, y);
-        } 
+        }
     }
 
 
@@ -280,10 +278,10 @@ public class PropScene : BaseScene {
     }
 
 
-    
 
-    
-    protected override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+
+
+    public override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {        
         if (keyState != JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN) return;
 
@@ -303,12 +301,7 @@ public class PropScene : BaseScene {
             }
 
             //加载下个场景
-            if (DataUtils.mode == Global.MODE.MODE_1P)
-            {
-                LoadLevel("Video");
-            }
-            
-            Sounder.instance.Play("选中歌曲下一页");
+            EnterGame();
             return;
         }
 
@@ -479,6 +472,16 @@ public class PropScene : BaseScene {
         }
     }
 
+    public void EnterGame()
+    {
+        if (DataUtils.mode == Global.MODE.MODE_1P)
+        {
+            LoadLevel("Video");
+        }
+
+        Sounder.instance.Play("选中歌曲下一页");
+    }
+
     void CancelBuy()
     {
         PropData lastSelectData;
@@ -500,7 +503,7 @@ public class PropScene : BaseScene {
 
     }
 
-    protected override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         Sounder.instance.Play("返回按键");       
         if (keyState != JoystickManager.JOYSTICK_KEY_STATE.KEY_DOWN) return;
@@ -529,7 +532,13 @@ public class PropScene : BaseScene {
         }
         else
         {
-            LoadLevel("SongList", false);
+            BackToSongList();
         }
     }
+
+    public void BackToSongList()
+    {
+        LoadLevel("SongList", false);
+    }
+
 }

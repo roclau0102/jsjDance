@@ -20,10 +20,10 @@ public class RegistScene : MonoBehaviour {
         {
             AndroidJavaClass activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             currentActivity = activity.GetStatic<AndroidJavaObject>("currentActivity");
-            if (Version.IsUSB())
-            {
-                //JoystickManager.instance.CallJavaFunction("InitUsb");
-            }
+            //if (Version.IsUSB())
+            //{
+            //    //JoystickManager.instance.CallJavaFunction("InitUsb");
+            //}
         }
         waitTime = Time.time;
 	}
@@ -68,11 +68,11 @@ public class RegistScene : MonoBehaviour {
 	void Update () {
         if (Application.platform != RuntimePlatform.Android) return;
 
-        if (Version.IsUSB())
-        {
-            CheckingPremissionDone();
-            return;
-        }
+        //if (Version.IsUSB())
+        //{
+        //    CheckingPremissionDone();
+        //    return;
+        //}
 
 
         if (done)

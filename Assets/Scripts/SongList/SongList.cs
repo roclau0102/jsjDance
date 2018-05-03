@@ -134,12 +134,12 @@ public class SongList : MonoBehaviour {
         float t = Time.time;
         foreach (KeyValuePair<int, SongData> data in Global.MUSIC_TABLE)
         {            
-            if ((Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_XRDS ||
-                Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_XRDSS_DISPLAY) &&
-                data.Value.enName.Trim() == "SistarShakeIt")
-            {
-                continue;
-            }
+            //if ((Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_XRDS ||
+            //    Version.currentPlatform == Version.PLAFTFORM_ENUM.WX_XRDSS_DISPLAY) &&
+            //    data.Value.enName.Trim() == "SistarShakeIt")
+            //{
+            //    continue;
+            //}
 
             bool found = false;
             for (int i = dataList.Count-1; i >0 ; i--)

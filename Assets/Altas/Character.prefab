@@ -5,10 +5,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -27,6 +27,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,6 +54,7 @@ MonoBehaviour:
   - name: 
     spriteCollection: {fileID: 0}
   managedSpriteCollection: 0
+  linkParent: {fileID: 0}
   loadable: 0
   atlasFormat: 0
   maxTextureSize: 2048
@@ -62,7 +65,7 @@ MonoBehaviour:
   atlasWidth: 1024
   atlasHeight: 2048
   forceSquareAtlas: 0
-  atlasWastage: 56.9676895
+  atlasWastage: 56.96769
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
@@ -1078,7 +1081,7 @@ MonoBehaviour:
   mipmapEnabled: 0
   anisoLevel: 1
   physicsEngine: 0
-  physicsDepth: .100000001
+  physicsDepth: 0.1
   disableTrimming: 0
   disableRotation: 0
   normalGenerationMode: 0
@@ -1087,6 +1090,7 @@ MonoBehaviour:
   editorDisplayScale: 1
   version: 4
   assetName: 
+  linkedSpriteCollections: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -1098,4 +1102,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

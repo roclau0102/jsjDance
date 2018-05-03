@@ -1368,7 +1368,7 @@ public class INFARED_RAY : OTHER_CONTORLER
                     if ((k == (KeyCode)10) || (k == (KeyCode)330))
                         enterFlag = true;    //因为 Input.GetKey(KeyCode.Return)得不到正确的返回值，所以这边增加 enter_flag变量特殊处理。     
                 }
-                if (Event.current.type == EventType.keyUp)
+                if (Event.current.type == EventType.KeyUp)
                 {
                     KeyCode k = Event.current.keyCode;
                     if ((k == (KeyCode)10) || (k == (KeyCode)330))

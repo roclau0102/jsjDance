@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="GAME_MODE">1</string>
-    <!--1是叠加模式,其他是插件模式-->
-</resources>

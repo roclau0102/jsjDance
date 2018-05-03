@@ -81,16 +81,16 @@ public class ScoreScene : BaseScene
 
     private void Update()
     {
-        if (Version.currentPlatform == Version.PLAFTFORM_ENUM.SkyWorth_Dis_NoReg)
-        {
-            if (Time.time - pressTime > 15)
-            {
-                DataUtils.isAutoMode = true;
-                DataUtils.runingAutoMode = true;
+        //if (Version.currentPlatform == Version.PLAFTFORM_ENUM.SkyWorth_Dis_NoReg)
+        //{
+        //    if (Time.time - pressTime > 15)
+        //    {
+        //        DataUtils.isAutoMode = true;
+        //        DataUtils.runingAutoMode = true;
 
-                AutoGoNext();
-            }
-        }
+        //        AutoGoNext();
+        //    }
+        //}
     }
 
     void AutoGoNext()
@@ -103,18 +103,18 @@ public class ScoreScene : BaseScene
         iTween.Stop();
     }
 
-    protected override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Move(int x, int y, BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
 
     }
 
-    protected override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         Sounder.instance.Play("返回按键");
         LoadLevel("SongList", false);
     }
 
-    protected override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
+    public override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         Sounder.instance.Play("返回按键");
         LoadLevel("SongList", false);
