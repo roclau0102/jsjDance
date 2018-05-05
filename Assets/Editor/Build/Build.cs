@@ -27,9 +27,11 @@ public class Build : Editor
     {
         PlayerSettings.Android.keystorePass = "123456";
         PlayerSettings.Android.keyaliasPass = "123456";
-
+        PlayerSettings.Android.forceSDCardPermission = true;
+        
         EditorUserBuildSettings.development = true;
         EditorUserBuildSettings.allowDebugging = true;
+        EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Gradle;
 
         BuildPlayerOptions options = new BuildPlayerOptions();
         options.scenes = CollectScenes();
@@ -37,7 +39,7 @@ public class Build : Editor
         if (Directory.Exists(apkPathDir))
             Directory.CreateDirectory(apkPathDir);
         Debug.Log(apkPathDir);
-        options.locationPathName = Path.Combine(apkPathDir, PlayerSettings.productName + "-debug.apk");
+        options.locationPathName = Path.Combine(apkPathDir, PlayerSettings.productName + ".apk");
         options.target = BuildTarget.Android;
         options.options = BuildOptions.None;
         BuildPipeline.BuildPlayer(options);
@@ -51,8 +53,11 @@ public class Build : Editor
         List<string> scenePaths = new List<string>();
         foreach (var scene in EditorBuildSettings.scenes)
         {
-            if (string.IsNullOrEmpty(scene.path))
+            if (!string.IsNullOrEmpty(scene.path))
+            {
                 scenePaths.Add(scene.path);
+                Debug.Log(scene.path);
+            }
         }
         return scenePaths.ToArray();
     }

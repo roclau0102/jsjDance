@@ -184,6 +184,13 @@ public class BeatGame : BaseScene
         playState = PLAY_STATE.PLAYING;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnButtonBack();
+        }
+    }
 
     
 	// Update is called once per frame
@@ -436,7 +443,12 @@ public class BeatGame : BaseScene
     public override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
         //if (type == INPUT_TYPE.BLANKET && Application.platform== RuntimePlatform.Android) return;
-       
+
+        OnButtonBack();
+    }
+
+    private void OnButtonBack()
+    {
         Sounder.instance.Play("返回按键");
         if (playState == PLAY_STATE.GAME_OVER)
         {

@@ -1,47 +1,20 @@
-[WX API]UID54:5b:cf:8c:82:a1已注册，刷新上线时间为现在
-[WX API]http://api.waixing.com:8090/client/doMb.action?sql=update games_users set  newtime = GETDATE() where uid = '54:5b:cf:8c:82:a1' &id=31
 http://img.waixing.com:8080/AppFiles/apk/gamenet/zhdance/data.txt:下载成功
 加载配件文件完成
 视频文件已解压
-[WX API]得到游戏表数据
-[WX API]http://api.waixing.com:8090/client/getMb.action?sql=select * from jsjdance where id = 74519&id= 50
-[面板提示]登陆成功！
-Camera  AnimComplete~~
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-SendMessage cannot be called during Awake, CheckConsistency, or OnValidate
-加载配件文件完成
-视频文件已解压
 配置文件加载完毕。
-排序用时:0
+加载file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music/PsyGuangJun.wav
+加载file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music/PsyGuangJun_easy.txt
+加载file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music/PsyGuangJun_mid.txt
+加载file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music/PsyGuangJun_hard.txt
+加载file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music/PsyGuangJun.png
+file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music/PsyGuangJun_easy.txt:下载成功
+[容易]最大分数：5595
+file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music/PsyGuangJun_mid.txt:下载成功
+[中等]最大分数：18768
+file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music/PsyGuangJun_hard.txt:下载成功
+[难]最大分数：10968
+file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music/PsyGuangJun.png:下载成功
+file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music/PsyGuangJun.wav:下载成功
+play video
 Camera  AnimComplete~~
-download cover:file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music\PsyGuangJun.png
-file:///D:/workspace/feige/jsjDance/Assets/StreamingAssets\music\PsyGuangJun.png:下载成功
-download cover: success
 JoystickManager Destroy

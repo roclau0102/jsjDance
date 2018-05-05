@@ -110,13 +110,17 @@ public class ScoreScene : BaseScene
 
     public override void PressEnter(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
+        BackToSceneSongList();
+    }
+
+    public void BackToSceneSongList()
+    {
         Sounder.instance.Play("返回按键");
         LoadLevel("SongList", false);
     }
 
     public override void Cancel(BaseScene.INPUT_TYPE type, JoystickManager.JOYSTICK_KEY_STATE keyState, JoystickManager.PLAYER_INDEX player)
     {
-        Sounder.instance.Play("返回按键");
-        LoadLevel("SongList", false);
+        BackToSceneSongList();
     }
 }
